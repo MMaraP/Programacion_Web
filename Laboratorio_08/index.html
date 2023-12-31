@@ -5,3 +5,12 @@
     <title>Calculadora Web</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
+<body>
+    <h1>CALCULADORA</h1>
+    <form action="cgi-bin/calculadora.cgi" method="post">
+        <label for="expresion">EXPRESION:</label>
+        <input type="text" id="expresion" name="expresion" required>
+        <input type="submit" value="CALCULAR">
+    </form>
+</body>
