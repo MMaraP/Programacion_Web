@@ -1,47 +1,56 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
-  }
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center; /* Centrar el contenido */
+  margin-top: 35%;
+}
+
+form {
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px; /* Agregar un poco de espacio alrededor del formulario */
+  border: 1px solid #000000; /* Agregar un borde al formulario */
+  border-radius: 5px; /* Hacer esquinas redondeadas */
+}
+
+label {
+  display: block;
+  margin-bottom: 10px; /* Aumentar el espacio entre etiquetas */
+  font-weight: bold; /* Hacer las etiquetas más visibles */
+}
+
+input[type="text"],
+input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px; /* Incrementar el espacio debajo de los campos */
+  box-sizing: border-box; /* Hacer que el ancho incluya el relleno y el borde */
+}
+
+input[type="submit"] {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Agregar una transición suave al color de fondo */
+}
+
+input[type="submit"]:hover {
+  background-color: #6d0000;
+}
+
   
-  form {
-    width: 300px;
-    margin: 0 auto;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 5px;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 10px;
-  }
-  
-  input[type="submit"] {
-    padding: 8px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input[type="submit"]:hover {
-    background-color: #0056b3;
-  }
-  
-  table {
-    border-collapse: collapse;
-    width: 100%;
-  }
-  
-  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-  
-  th {
-    background-color: #f2f2f2;
-  }
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
