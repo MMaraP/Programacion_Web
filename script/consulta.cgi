@@ -15,3 +15,6 @@ my $nombre_universidad = $cgi->param('nombre_universidad') || '';
 
 # Definir la ruta al archivo CSV
 my $csv_file = 'C:/Program Files/xampp/htdocs/PW/archivos csv/Programas de Universidades.csv';
+
+# Abrir el archivo CSV
+open my $archivo, '<', $csv_file or die "No se pudo abrir el archivo: $!";
