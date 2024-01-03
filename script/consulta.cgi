@@ -41,3 +41,9 @@ print <<HTML;
         <th>Denominacion Programa</th>
       </tr>
 HTML
+
+# Procesar el archivo CSV línea por línea
+while (my $row = $csv->getline($archivo)) {
+    my $line = join('|', @$row);  # Unir los campos en una línea con '|'
+    my @fields = split('\|', $line);  # Separar la línea en campos
+}
