@@ -49,16 +49,16 @@ while (my $row = $csv->getline($archivo)) {
     my $departamento = $fields[10];  # Campo del departamento local
     my $denominacion = $fields[16];  # Campo de la denominación del programa
 
-    # Realizar la búsqueda según los parámetros del formulario
-	if (($nombre_universidad eq '' || lc $nombre =~ /\Q$nombre_universidad\E/i)) {
-		# Imprimir resultados en filas de tabla
-		print "<tr>";
-		print "<td>$nombre</td>";
-		print "<td>$periodo</td>";
-		print "<td>$departamento</td>";
-		print "<td>$denominacion</td>";
-		print "</tr>";
-	}
+    # Realizar la búsqueda según los parámetros del formulario usando expresiones regulares
+    if ($nombre_universidad eq '' || $nombre =~ /\Q$nombre_universidad\E/i) {
+        # Imprimir resultados en filas de tabla
+        print "<tr>";
+        print "<td>$nombre</td>";
+        print "<td>$periodo</td>";
+        print "<td>$departamento</td>";
+        print "<td>$denominacion</td>";
+        print "</tr>";
+    }
 }
 
 # Cerrar etiquetas HTML
