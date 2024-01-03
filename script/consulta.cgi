@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 use CGI;
-use Text::CSV;
 
 # Crear objeto CGI
 my $cgi = CGI->new;
@@ -19,9 +18,6 @@ my $csv_file = 'C:/Program Files/xampp/htdocs/PW/archivos csv/Programas de Unive
 # Abrir el archivo CSV
 open my $archivo, '<', $csv_file or die "No se pudo abrir el archivo: $!";
 
-# Crear objeto Text::CSV
-my $csv = Text::CSV->new({ binary => 1 }) or die "No se pudo usar Text::CSV: " . Text::CSV->error_diag();
-
 # Imprimir resultados en HTML como tabla
 print <<HTML;
 <!DOCTYPE html>
@@ -31,6 +27,7 @@ print <<HTML;
   <link rel='stylesheet' type='text/css' href='/PW/Lab_09/css/styles.css'>
 </head>
 <body>
+  <img src="/PW/Lab_09/Logo_UNSA.png" alt="Logo de la universidad" class = "logo">
   <h1>Resultados de la Consulta</h1>
   <div class="results">
     <table>
