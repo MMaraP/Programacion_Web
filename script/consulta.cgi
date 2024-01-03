@@ -54,5 +54,12 @@ while (my $row = $csv->getline($archivo)) {
 
     # Realizar la búsqueda según los parámetros del formulario
 	if (($nombre_universidad eq '' || lc $nombre =~ /\Q$nombre_universidad\E/i)) {
-  }
+		# Imprimir resultados en filas de tabla
+		print "<tr>";
+		print "<td>$nombre</td>";
+		print "<td>$periodo</td>";
+		print "<td>$departamento</td>";
+		print "<td>$denominacion</td>";
+		print "</tr>";
+	}
 }
