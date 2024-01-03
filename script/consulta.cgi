@@ -46,4 +46,9 @@ HTML
 while (my $row = $csv->getline($archivo)) {
     my $line = join('|', @$row);  # Unir los campos en una línea con '|'
     my @fields = split('\|', $line);  # Separar la línea en campos
+
+    my $nombre = $fields[1];  # El segundo campo es el nombre de la universidad
+    my $periodo = $fields[4];  # Campo del periodo de licenciamiento
+    my $departamento = $fields[10];  # Campo del departamento local
+    my $denominacion = $fields[16];  # Campo de la denominación del programa
 }
