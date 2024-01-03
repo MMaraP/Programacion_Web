@@ -63,3 +63,14 @@ while (my $row = $csv->getline($archivo)) {
 		print "</tr>";
 	}
 }
+
+# Cerrar etiquetas HTML
+print <<HTML;
+    </table>
+  </div>
+</body>
+</html>
+HTML
+
+# Cerrar el archivo CSV
+close $archivo;
