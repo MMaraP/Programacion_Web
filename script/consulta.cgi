@@ -28,6 +28,7 @@ print <<HTML;
 </head>
 <body>
   <img src="/PW/Lab_09/Logo_UNSA.png" alt="Logo de la universidad" class = "logo">
+  <img src="/PW/Lab_09/logo.png" alt="logo" class = "logo2">
   <h1>Resultados de la Consulta</h1>
   <div class="results">
     <table>
@@ -40,9 +41,9 @@ print <<HTML;
 HTML
 
 # Procesar el archivo CSV línea por línea
-while (my $row = $csv->getline($archivo)) {
-    my $line = join('|', @$row);  # Unir los campos en una línea con '|'
-    my @fields = split('\|', $line);  # Separar la línea en campos
+while (my $linea = <$archivo>) {
+    chomp $linea;  # Eliminar el carácter de nueva línea al final de la línea
+    my @fields = split('\|', $linea);  # Separar la línea en campos utilizando '|'
 
     my $nombre = $fields[1];  # El segundo campo es el nombre de la universidad
     my $periodo = $fields[4];  # Campo del periodo de licenciamiento
