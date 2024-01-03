@@ -51,4 +51,8 @@ while (my $row = $csv->getline($archivo)) {
     my $periodo = $fields[4];  # Campo del periodo de licenciamiento
     my $departamento = $fields[10];  # Campo del departamento local
     my $denominacion = $fields[16];  # Campo de la denominación del programa
+
+    # Realizar la búsqueda según los parámetros del formulario
+	if (($nombre_universidad eq '' || lc $nombre =~ /\Q$nombre_universidad\E/i)) {
+  }
 }
