@@ -18,3 +18,6 @@ my $csv_file = 'C:/Program Files/xampp/htdocs/PW/archivos csv/Programas de Unive
 
 # Abrir el archivo CSV
 open my $archivo, '<', $csv_file or die "No se pudo abrir el archivo: $!";
+
+# Crear objeto Text::CSV
+my $csv = Text::CSV->new({ binary => 1 }) or die "No se pudo usar Text::CSV: " . Text::CSV->error_diag();
